@@ -1,0 +1,12 @@
+$(function(){
+  $('.col').click(function(){
+    $('.col')
+      .removeClass('small')
+      .removeClass('full');
+    $(this).addClass('full');
+    $('.col')
+      .not($(this))
+      .addClass('small');
+    console.log($('.col').not($(this)).text());
+  });
+})
